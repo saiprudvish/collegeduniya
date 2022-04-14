@@ -1,0 +1,32 @@
+<h1 class="text-danger mt-5 mx-5">COLLEGE DETAILS </h1>
+ <table class="table text-danger  mt-5 " >
+    <div class="background w-75 d-block mx-auto">
+    <table class="table table-striped text-dark  p-5 backc" >
+        <thead>
+            <tr>
+                <th>COLLEGE CODE</th>
+                <th>COLLEGE NAME</th>
+                <th>LOCATION</th>
+                <th>COURSE</th>
+                <th>BRANCH</th>
+                <th>FEE STRUCTURE</th>
+                <th>AFFILIATIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            
+            <tr *ngFor="let p of objs">
+                <td routerLink="{{p.code}}"  class="id1"  >  <strong>{{p.code}}</strong></td>
+                <td> <strong>{{p.Name}}</strong></td>
+                <td> <strong>{{p.Location}}</strong></td>
+                <td> <strong>{{p.Course}}</strong></td>
+                <td> <strong>{{p.branch}}</strong></td>
+                <td> <strong>{{p.fee}}</strong></td>
+                <td> <strong>{{p.affiliations}}</strong></td>
+                </tr>      
+            </tbody>
+            </table>
+        
+            </div>
+</table> 

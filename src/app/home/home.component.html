@@ -1,0 +1,96 @@
+<div class="row">
+<div class="col-6">
+<section class="w-100 h-custom">
+
+      <div class="row d-flex justify-content-left align-items-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card mt-5 ">
+            <div class="card-body ">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Find Colleges</h3>
+  
+              <form class="px-md-2"   #ref="ngForm"   (ngSubmit)="getData(ref.value)">
+  
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1q">Full Name</label>
+                  <input type="text" id="form3Example1q" class="form-control"   name="username"  ngModel  />
+            
+                </div>
+    
+                  <div class="col-md-6">
+                     
+                    <label class="form-label" >Location</label>
+                    <select class="select mt-3"   name="district" value="" checked="checked" aria-label="Floating label select example"  ngModel>
+                      <option value="1" disabled>Location</option>
+                      <option value="Hyderabad">Hyderabad</option>
+                      <option value="Karimnagar">Karimnagar</option>
+                      <option value="Warangal">Warangal</option>
+                    </select>
+                </div>
+  
+                <div class=" col-md-6 mt-3 ">
+                    <label class="form-label" > Course</label>
+                    <br>
+                  <select class="select mb-5"  name="course" aria-label="Floating label select example"  ngModel>
+                    <option value="1" disabled>Course</option>
+                    <option value="Btech">Btech</option>
+                    <option value="PG">PG</option>
+                    
+                  </select>
+  
+                </div>
+  
+  
+                <button type="submit" class="btn btn-danger btn-md mb-1">Submit</button>
+  
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+</div>
+<div class="col-6">
+
+  <h1 class="text-danger mt-5 mx-5">COLLEGES DATA </h1>
+ <table class="table text-danger  mt-5 " >
+    <div class="background w-75 d-block mx-auto">
+    <table class="table table-striped text-dark  p-5 backc" >
+        <thead>
+            <tr>
+                <th>COLLEGE CODE</th>
+                <th>COLLEGE NAME</th>
+                <th>LOCATION</th>
+                <th>COURSE</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="!status">
+
+            
+            <tr  *ngFor="let p of datss">
+                <td routerLink="{{p.code}}"  class="id1"  >  <strong>{{p.code}}</strong></td>
+                <td> <strong>{{p.Name}}</strong></td>
+                <td> <strong>{{p.Location}}</strong></td>
+                <td> <strong>{{p.Course}}</strong></td>
+                </tr>      
+            </tbody>
+
+
+            <tbody *ngIf="status">
+
+            
+              <tr  *ngFor="let p of colleges">
+                  <td routerLink="{{p.code}}"  class="id1"  >  <strong>{{p.code}}</strong></td>
+                  <td> <strong>{{p.Name}}</strong></td>
+                  <td> <strong>{{p.Location}}</strong></td>
+                  <td> <strong>{{p.Course}}</strong></td>
+                  </tr>      
+              </tbody>
+            </table>
+        
+            </div>
+</table> 
+</div>
+</div>

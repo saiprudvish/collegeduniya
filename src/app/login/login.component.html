@@ -1,0 +1,28 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
+            <img src="https://play-lh.googleusercontent.com/v3G7eSQGgA1XGmWXQKac4KSZ_N3u3_F4_o_QgUFV35V9NqqSIWXh4h0ZNaYOaHDJ_7k" width="90%" alt="">
+         </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-5 mb-5">
+            <form class="w-100 " #ref="ngForm"  (ngSubmit)="onLogin(ref.value)">
+                <h1 class="text-center text-dark mt-5">LOGIN</h1>
+                <div class="form-floating mb-3 mt-3">
+                    <input type="username" class="form-control" id="us" placeholder="name@example.com" name="username"  ngModel>
+                    <label for="us" class="form-label">Username</label>
+                  </div>
+                  <div class="form-floating">
+                    <input type="password" class="form-control" id="ps" placeholder="Password" name="password"  ngModel>
+                    <label for="ps" class="form-label">Password</label>
+                  </div>
+                  <button class="btn btn-warning text-dark d-block mx-auto mt-3 mb-3" type="submit">Sign In</button>
+                
+        
+
+            </form>
+            
+        </div>
+
+
+    </div>
+
+</div>
